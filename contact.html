@@ -45,6 +45,32 @@
 		<textarea id="message" name="message" required></textarea><br><br>
 
 		<input type="submit" value="Submit">
+        <div id="message"></div>
 	</form>
+    <div>
+        <?php
+            if (isset($_POST['submit'])) {
+                echo "Thank you. Stay Connect.";
+            }
+        ?>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        const message = document.querySelector('#message');
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+              fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+          })
+          .then(response => {
+            form.style.display = 'none';
+            message.textContent = 'Thank you. Stay Connect.';
+          })
+          .catch(error => {
+            console.error('Error submitting form:', error);
+          });
+        });
+      </script>      
 </body>
 </html>
