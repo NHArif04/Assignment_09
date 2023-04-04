@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My Personal Blog</title>
-	<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
 </head>
 <body>
 	<header>
 		<nav>
 			<div class="logo">
-				<a href="#"><img src="resources/logo.png" alt="My Personal Blog"></a>
+				<a href="index.html"><img src="resources/logo.png" height="50" width="80" alt="My Personal Blog"></a>
 			</div>
-			<ul class="menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blogpage.html">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 	<main>
@@ -24,12 +34,12 @@
 			<div class="container">
 				<div class="post">
 					<div class="image">
-						<a href="#"><img src="resources/image-1.jpg" alt="Featured Post"></a>
+						<a href="single-post.html"><img src="resources/image-1.jpg" alt="Featured Post"></a>
 					</div>
 					<div class="content">
-						<h2><a href="#">Title of Featured Post</a></h2>
+						<h2><a href="single-post.html">Title of Featured Post</a></h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-						<a href="#" class="btn">Read More</a>
+						<a href="single-post.html" class="btn">Read More</a>
 					</div>
 				</div>
 			</div>
